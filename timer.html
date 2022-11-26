@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style/timer.css">
+</head>
+<body>
+    <header>
+        <h1>Timer</h1>
+        <menu>
+            <a href="index.html">Relógio</a>
+            <a href="cronômetro.html">Cronometro</a>
+            <a href="alarme.html">Alarme</a>
+        </menu>
+    </header>
+    <main>
+        <div id="dpri">
+            <input type="number" id="inhora" placeholder="hora" min="0" max="24"> :
+            <input type="number" id="inmin" placeholder="min" min="0" max="59"> :
+            <input type="number" id="inseg" placeholder="seg" min="0" max="59">
+            <input type="button" value="Iniciar" id="inbut" onclick="iniciar()">
+            <input type="button" value="parar" id="inpar" onclick="parar()">
+        </div>
+        <div id="dsec"></div>
+
+    </main>
+    <footer>
+        <p>&copy;NVG</p>
+    </footer>
+    <script src="js/timer.js"></script>
+</body>
+</html>
