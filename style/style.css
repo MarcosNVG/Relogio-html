@@ -1,6 +1,8 @@
+/*corpo*/
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,51 +10,60 @@ body {
     background-color: #141414;
     color: white;
     max-height: 100vh;
-    line-height: 20vh;
+    font-family: Arial, sans-serif;
 }
-
+/*cabeçalho*/
 header {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-section {
     margin: auto;
-    width: 350px;
-    text-align: center;
-    background-color: darkblue;
-    height: 350px;
-    border-radius: 100%;
+    margin-top: 2vh;
 }
 
-div#horario {
-    text-align: center;
-    line-height: 350px;
-    font-size: 70px;
+header>h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+/*menu de navegação*/
+menu {
+    float: right;
+    margin-right: 10px;
+    margin-top: -3.2vh;
 }
 
 a {
     background-color: darkblue;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
     color: white;
     padding: 10px;
     border-radius: 20px;
+    transition: 0.5s;
 }
 
 a:hover {
     background-color: rgb(1, 1, 78);
-    transition: 0.6s;
-    scale: 2px
-}
-
-menu {
-    float: right;
-    margin-top: -135px;
-    margin-right: 10px;
 }
 
 
+/*principal*/
+section {
+    margin: 15vh auto;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    background-color: darkblue;
+    border-radius: 100%;
+}
+
+div#horario {
+    margin: auto;
+    text-align: center;
+    line-height: 500px;
+    font-size: 80px;
+}
+
+/*rodapé*/
 footer {
     text-align: center;
-    margin: auto;
 }
