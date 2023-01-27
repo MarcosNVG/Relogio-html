@@ -59,6 +59,7 @@ section {
     height: 500px;
     border-radius: 100%;
     background-color: #00008B;
+    justify-content: center;
 }
 
 #horario {
@@ -74,3 +75,34 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+
+@media (max-width: 1366px) {
+    section {
+        width: 400px;
+        height: 400px;
+    }
+    #horario {
+        line-height: 400px;
+        font-size: 4rem;
+    }
+}
+
+/*@media (max-width: 1366px) {
+    section {
+        width: 400px;
+        height: 400px;
+    }
+    #horario {
+        line-height: 400px;
+    }
+}
+
+/*@media (max-width: 1366px) {
+    section {
+        width: 400px;
+        height: 400px;
+    }
+    #horario {
+        line-height: 400px;
+    }
+}*/
