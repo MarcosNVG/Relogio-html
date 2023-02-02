@@ -1,3 +1,4 @@
+/*Configurações principais*/
 * {
     Margin: 0;
     padding: 0;
@@ -14,9 +15,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/*cabeçalho*/
 header {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 2;
     text-align: center;
@@ -34,9 +36,12 @@ nav {
     grid-row-end: 2;
     text-align: center;
     margin-top: 20px;
-    /*margin-left: 50px;*/
 }
 
+li {
+    display: inline-block;
+    list-style: none;
+}
 a {
     background-color: #00008B;
     border-radius: 10px;
@@ -51,6 +56,13 @@ a:hover {
     background-color: rgb(1, 1, 78);
 }
 
+div#oppenmenu {
+    display: none;
+}
+div#closemenu {
+    display: none;
+}
+/*principal*/
 section {
     grid-area: 2 / 2 / 4 / 5;
     margin: auto;
@@ -66,7 +78,7 @@ section {
     line-height: 500px;
     font-size: 5rem;
 }
-
+/*rodapé*/
 footer {
     grid-column-start : 3;
     grid-column-end: 4;
@@ -75,6 +87,8 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+
+/*Responsividade*/
 
 @media (max-width: 1366px) {
     section {
@@ -87,12 +101,16 @@ footer {
     }
 }
 
-/*@media (max-width: 1000px) {
-    menu {
-        padding: 0px 100px;
-        
+@media (max-width: 1000px) {
+    nav {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        text-align: center;
+        margin-top: 20px;
     }
-}*/
+}
 
 @media (max-width: 800px) {
     section {
@@ -106,6 +124,9 @@ footer {
 }
 
 @media (max-width: 480px) {
+    header>h1 {
+        font-size: 2rem;
+    }
     section {
         width: 200px;
         height: 200px;
