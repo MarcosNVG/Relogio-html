@@ -38,10 +38,6 @@ nav {
     margin-top: 20px;
 }
 
-li {
-    display: inline-block;
-    list-style: none;
-}
 a {
     background-color: #00008B;
     border-radius: 10px;
@@ -56,12 +52,7 @@ a:hover {
     background-color: rgb(1, 1, 78);
 }
 
-div#oppenmenu {
-    display: none;
-}
-div#closemenu {
-    display: none;
-}
+
 /*principal*/
 section {
     grid-area: 2 / 2 / 4 / 5;
@@ -103,6 +94,14 @@ footer {
 
 @media (max-width: 1000px) {
     nav {
+        grid-column-start: 4;
+        grid-column-end: 6;
+    }
+
+}
+
+@media (max-width: 800px) {
+    nav {
         grid-column-start: 1;
         grid-column-end: 6;
         grid-row-start: 4;
@@ -110,9 +109,6 @@ footer {
         text-align: center;
         margin-top: 20px;
     }
-}
-
-@media (max-width: 800px) {
     section {
         width: 300px;
         height: 300px;

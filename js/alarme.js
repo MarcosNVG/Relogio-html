@@ -2,6 +2,12 @@ function alarmar(){
     var hora = window.document.getElementById('inhour');
     var min = window.document.getElementById('inminute');
     var marc = window.document.getElementById('inmarc');
+    var horario = new Date();
+    if (hora.value == horario.getHours && min.value == horario.getMinutes && horario.getSeconds <= 0){
+        window.alert('Digite novamente.')
+    } else {
+        window.alert('Seu alarme foi adicionado.')
+    }    
     var time = setInterval(function(){
                 var data = new Date()
                 var horario = data.getTime()

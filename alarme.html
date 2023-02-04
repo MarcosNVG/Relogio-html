@@ -8,17 +8,25 @@
 <body>
     <header>
         <h1>Alarme</h1>
+    </header>
+    <nav>
         <menu>
             <a href="index.html">Relógio</a>
             <a href="cronometro.html">Cronometro</a>
             <a href="timer.html">Timer</a>
         </menu>
-    </header>
+    </nav>
     <main>
-        Hora<input type="number" id="inhour"  min="0" max="24">
-        Min<input type="number" id="inminute" min="0" max="59">
-        <input type="button" value="ok" onclick="alarmar()">
-        <p><input type="text" id="inmarc" placeholder="Marcador"></p>
+        <div>
+            <input type="number" id="inhour"  min="0" max="24" placeholder="hora">
+            :
+            <input type="number" id="inminute" min="0" max="59" placeholder="min">
+            <br>
+            <input type="text" id="inmarc" placeholder="Marcador">
+            <br>
+            <input type="button" id="button" value="ok" onclick="alarmar()">
+        </div>
+
     </main>
     <footer>
         <p>&copy;NVG</p>
