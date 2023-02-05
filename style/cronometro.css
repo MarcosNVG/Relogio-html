@@ -1,0 +1,124 @@
+/*Configurações principais*/
+* {
+    Margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+   /* grid-template: 237px 237px 237px 236px/384px 384px 384px 384px 384px;*/
+    grid-template: 25% 25% 25% 25%/20% 20% 20% 20% 20% ;
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/*cabeçalho*/
+header {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header>h1 {
+    font-size: 3rem;
+}
+
+nav {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    background-color: #00008B;
+    border-radius: 10px;
+    font-size: 11pt;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: rgb(1, 1, 78);
+}
+
+
+/*principal*/
+
+section {
+    grid-area: 2 / 1 / 4 / 6;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #00008B;
+    border-radius: 5px;
+    padding: 100px;
+}
+
+div#ctempo{
+    margin-bottom: 10px;
+    font-size: 16pt;
+}
+.buttons{
+    border: none;
+    background-color: #00008B;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.buttons:hover{
+    background-color: rgb(1, 1, 78);
+}
+/*rodapé*/
+footer {
+    grid-column-start : 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: center;
+    margin-top: auto;
+}
+
+/*Responsividade*/
+
+@media (max-width: 1000px) {
+    nav {
+        grid-column-start: 4;
+        grid-column-end: 6;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        text-align: center;
+        margin-top: 20px;
+    }
+    section {
+        grid-area: 2 / 1 / 4 / 6;
+    } 
+}
+
+@media (max-width: 500px) {
+    header>h1 {
+        font-size: 2rem;
+    }
+    section {
+        border: none;
+    }
+}

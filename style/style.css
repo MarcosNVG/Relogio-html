@@ -55,7 +55,7 @@ a:hover {
 
 /*principal*/
 section {
-    grid-area: 2 / 2 / 4 / 5;
+    grid-area: 2 / 1 / 4 / 6;
     margin: auto;
     text-align: center;
     width: 500px;

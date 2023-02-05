@@ -1,14 +1,27 @@
-var hora = window.document.getElementById('inhora');
-var min = window.document.getElementById('inmin');
-var seg = window.document.getElementById('inseg');
+var hora
+var min 
+var seg 
 var bot = window.document.getElementById('bt')
 var h
 var m
 var s
 var time 
 
+//quando a página iniciar
+
+function novo(){
+    dpri.innerHTML = '<input type="number" id="inhora" class="intempo" placeholder="hora" min="0" max="24"> : '
+    dpri.innerHTML += '<input type="number" id="inmin" class="intempo" placeholder="min" min="0" max="59"> : '
+    dpri.innerHTML += '<input type="number" id="inseg" class="intempo" placeholder="seg" min="0" max="59">'
+    bot.innerHTML = '<input type="button" value="Iniciar" class="buttons" onclick="iniciar()">'
+}
+
 //interatividade com os botões
+
 function iniciar(){
+    var hora = window.document.getElementById('inhora');
+    var min = window.document.getElementById('inmin');
+    var seg = window.document.getElementById('inseg');
     h = hora.value;
     m = min.value;
     s = seg.value
@@ -27,20 +40,20 @@ function iniciar(){
         }
         write()
         time = setInterval(timer, 1000) 
-        bot.innerHTML = '<input type="button" value="Parar" onclick="parar()">'
+        bot.innerHTML = '<input type="button" value="Parar" class="buttons" onclick="parar()">'
         hora.value = ''
     }
 }
 
 function parar(){
     clearInterval(time)
-    bot.innerHTML = '<input type="button" value="Continue" onclick="continuar()">'
-    bot.innerHTML += '<input type="button" value="Iniciar" onclick="iniciar()">'
+    bot.innerHTML = '<input type="button" value="Continuar" class="buttons" onclick="continuar()">'
+    bot.innerHTML += '<input type="button" value="Novo" class="buttons" onclick="novo()">'
 }
 
 function continuar(){
     time = setInterval(timer, 1000)
-    bot.innerHTML = '<input type="button" value="Parar" onclick="parar()">'
+    bot.innerHTML = '<input type="button" value="Parar" class="buttons" onclick="parar()">'
 }
 
 //funcionalidade do programa
@@ -65,13 +78,15 @@ function timer(){
    write()
 }
 
+//escrita e dois digitos
+
 function write(){
     if(h == 0 && m == 0){
-        dsec.innerHTML =  twoDigits(s)
+        dpri.innerHTML =  twoDigits(s)
     } else if (h == 0) {
-        dsec.innerHTML = twoDigits(m) +':'+ twoDigits(s)  
+        dpri.innerHTML = twoDigits(m) +':'+ twoDigits(s)  
     } else {
-        dsec.innerHTML = twoDigits(h) +':'+ twoDigits(m) +':'+ twoDigits(s)  
+        dpri.innerHTML = twoDigits(h) +':'+ twoDigits(m) +':'+ twoDigits(s)  
     }
 }
 

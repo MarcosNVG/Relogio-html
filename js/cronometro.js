@@ -9,13 +9,19 @@ var tempo
 function iniciar(){
     cronometro()
     tempo = setInterval(cronometro, 10)
-    dbt.innerHTML = '<input type="button" value="Parar" id="parin" onclick="parar()" >'
+    dbt.innerHTML = '<input type="button" value="Parar" id="parin" class="buttons" onclick="parar()" >'
         
 }
 
 function parar(){
     clearInterval(tempo)
-    dbt.innerHTML = '<input type="button" value="Resetar" id="resin" onclick="reset()" >'
+    dbt.innerHTML = '<input type="button" value="Continuar" id="contin" class="buttons" onclick="continuar()" >'
+    dbt.innerHTML += '<input type="button" value="Resetar" class="buttons" id="resin" onclick="reset()" >'
+}
+
+function continuar(){
+    tempo = setInterval(cronometro, 10)
+    dbt.innerHTML = '<input type="button" value="Parar" id="parin" class="buttons" onclick="parar()" >'
 }
 
 function reset(){
@@ -24,7 +30,7 @@ function reset(){
     sec = 0
     mls = 0
     ctempo.innerHTML = twoDigits(sec)+':'+twoDigits(mls)
-    dbt.innerHTML = '<input type="button" value="Iniciar" id="butin" onclick="iniciar()">'
+    dbt.innerHTML = '<input type="button" value="Iniciar" id="butin" class="buttons" onclick="iniciar()">'
 }
 
 //funcionalidades internas

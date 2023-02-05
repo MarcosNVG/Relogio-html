@@ -58,15 +58,15 @@ function doisdigitos(digito){
     }
 }
 
-//Faz a verificação se o horário inserido é maior que 24h e se os minutos são maiores que 59
+//Faz a verificação se o horário inserido é maior que 23h e se os minutos são maiores que 59
 function verificarHorario(){
-    if (hora.value > 24 && min.value > 59){
+    if (hora.value > 23 && min.value > 59){
         window.alert('Os valores de horas e minutos informados são maiores que os permitidos, atualizaremos seu alarme para o valor máximo permitido.')
-        hora.value = 24
+        hora.value = 23
         min.value = 59
-    } else if (hora.value > 24){
-        window.alert('O horário inserido é maior que 24 horas então atualizaremos o horário do alarme pra 24h.')
-        hora.value = 24
+    } else if (hora.value > 23){
+        window.alert('O horário inserido é maior que 23 horas então atualizaremos o horário do alarme pra 23h.')
+        hora.value = 23
     } else if (min.value > 59){
             window.alert('O minuto inserido é maior que 59 minutos então será atualizado para o valor máximo de 59 minutos.')
             min.value = 59
