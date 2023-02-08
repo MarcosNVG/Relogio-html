@@ -109,7 +109,7 @@ footer {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     nav {
         grid-column-start: 1;
         grid-column-end: 6;
@@ -122,8 +122,8 @@ footer {
         grid-area: 2 / 1 / 4 / 6;
         margin: auto;
         text-align: center;
-        border: 2px solid #00008B;
-        padding: 50px;
+        border: none;
+        padding: 10px;
     } 
 }
 
